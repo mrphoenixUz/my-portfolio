@@ -34,25 +34,25 @@ const Skills = () => {
     },
   ];
   return (
-    <section id="skills" className="py-10 bg-gray-800 relative">
+    <section id="skills" className="py-10 relative">
       <div className="mt-8 text-gray-100 text-center">
         <h3 className="text-4xl font-semibold">
-          My <span className="text-cyan-600">Skills</span>
+          My <span className="text-[#15ff00]">Skills</span>
         </h3>
         <p className="text-gray-400 mt-3 text-lg">My knowledge</p>
         <div className="flex items-center justify-center max-w-6xl mt-12 mx-auto gap-10 flex-wrap">
           {skills?.map((skill, i) => (
             <div
               key={i}
-              className="border-2 group border-cyan-600 relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
+              className="border-2 group border-[#15ff00] relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
             >
               <div
                 style={{
-                  background: `conic-gradient(rgb(8,145,170) ${skill.count}%,#ddd ${skill.count}%)`,
+                  background: `conic-gradient(#15ff00 ${skill.count}%,#ddd ${skill.count}%)`,
                 }}
                 className="w-32 h-32 flex items-center justify-center rounded-full"
               >
-                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-cyan-600">
+                <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-[#15ff00]">
                   <i class={skill.logo}></i>
                 </div>
               </div>

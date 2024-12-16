@@ -11,7 +11,7 @@ const Contact = () => {
     <section id="contact" className="py-10 px-3 text-white">
       <div className="text-center mt-8 px-4 md:px-8">
         <h3 className="text-3xl md:text-4xl font-semibold">
-          Contact <span className="text-cyan-600">Me</span>
+          Contact <span className="text-[#15ff00]">Me</span>
         </h3>
         <p className="text-gray-400 mt-3 text-base md:text-lg">Get in touch</p>
 
@@ -19,7 +19,7 @@ const Contact = () => {
           {social_media?.map((media) => (
             <div
               key={media.key}
-              className="text-cyan-600 hover:text-white cursor-pointer"
+              className="text-[#15ff00] hover:text-white cursor-pointer"
             >
               <a href={media.link} target="_blank">
                 <i className={media.icon}></i>
