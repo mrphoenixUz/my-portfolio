@@ -53,7 +53,7 @@ const Skills = () => {
                 className="w-32 h-32 flex items-center justify-center rounded-full"
               >
                 <div className="text-6xl w-28 h-28 bg-gray-900 rounded-full flex items-center justify-center group-hover:text-[#15ff00]">
-                  <i class={skill.logo}></i>
+                  <i className={skill.logo}></i>
                 </div>
               </div>
               <p className="text-xl mt-3">{skill.level}</p>
