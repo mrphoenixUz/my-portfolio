@@ -22,20 +22,20 @@ const Navbar = () => {
         sticky ? "bg-[#d1ffcd]/40  text-gray-900" : "text-white"
       }`}
     >
-      <div className="flex items-center justify-between">
-        <div className="mx-7">
-          <h4 className="text-4xl uppercase font-bold">
-            Ka<span className="text-[#15ff00]">rim</span>ov
+      <div className="flex items-center px-3 container mx-auto justify-between">
+        <div className="">
+          <h4 className="text-4xl m-4 uppercase text-[#15ff00] font-bold">
+            Karimov
           </h4>
         </div>
         <div
           className={` ${
-            sticky ? "md:bg-white/0 bg-[#006500]" : "bg-[#006500]"
-          } text-gray-900 md:block hidden px-7 py-2 font-medium  rounded-bl-full`}
+            sticky ? "md:bg-white/0 " : ""
+          } text-white md:block hidden py-2 font-medium  rounded-bl-full`}
         >
           <ul className="flex items-center gap-1 py-2 text-lg">
             {menuLinks?.map((menu, i) => (
-              <li key={i} className="px-6 hover:text-[#15ff00]">
+              <li key={i} className={`px-6 hover:text-[#15ff00] ${sticky ? "text-gray-900" : "text-white"}`}>
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
             ))}
@@ -60,7 +60,7 @@ const Navbar = () => {
               <li
                 onClick={() => setOpen(false)}
                 key={i}
-                className="px-6 hover:text-[#da3333]"
+                className="px-6"
               >
                 <a href={menu?.link}>{menu?.name}</a>
               </li>
