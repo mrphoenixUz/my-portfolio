@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const social_media = [
@@ -21,35 +22,32 @@ const Contact = () => {
     message: "",
   });
 
+  const [status, setStatus] = useState("");
+
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch("http://localhost:5000/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+    const SERVICE_ID = "service_xkrvao6";
+    const TEMPLATE_ID = "template_yua5v7n";
+    const PUBLIC_KEY = "QZbyfjrn-v0bsEJdJ";
 
-      if (response.ok) {
-        alert("Message sent successfully!");
-      } else {
-        alert("Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error sending email:", error);
-      alert("An error occurred. Please try again.");
-    }
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, formData, PUBLIC_KEY)
+      .then((response) => {
+        setStatus("Message sent successfully!");
+        setFormData({ name: "", email: "", message: "" });
+      })
+      .catch((error) => {
+        setStatus("Failed to send the message. Please try again.");
+        console.error("Error sending email:", error);
+      });
   };
+
   return (
     <section id="contact" className="py-10 px-3 text-white">
       <div className="text-center mt-8 px-4 md:px-8">
@@ -61,10 +59,7 @@ const Contact = () => {
           className="mt-16 flex md:flex-row flex-col
          gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
         >
-          <form
-            className="flex text-black flex-col flex-1 gap-5"
-            onSubmit={handleSubmit}
-          >
+          <form className="flex text-black flex-col flex-1 gap-5" onSubmit={handleSubmit}>
             <input
               type="text"
               name="name"
@@ -92,6 +87,7 @@ const Contact = () => {
             <button className="btn-primary w-fit" type="submit">
               Send Message
             </button>
+            {status && <p>{status}</p>}
           </form>
           <div className="flex flex-col  gap-7 ">
             {contact_info.map((contact, i) => (
