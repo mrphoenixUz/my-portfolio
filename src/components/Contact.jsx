@@ -57,7 +57,7 @@ const Contact = () => {
         <p className="text-gray-400 mt-3 text-base md:text-lg">Get in touch</p>
         <div
           className="mt-16 flex md:flex-row flex-col
-         gap-6 max-w-5xl bg-gray-800 md:p-6 p-2 rounded-lg mx-auto"
+         gap-6 max-w-5xl bg-gray-900 md:p-6 p-2 rounded-lg mx-auto"
         >
           <form className="flex text-black flex-col flex-1 gap-5" onSubmit={handleSubmit}>
             <input
@@ -67,6 +67,7 @@ const Contact = () => {
               value={formData.name}
               onChange={handleChange}
               required
+              className="bg-gray-950 outline-none rounded-lg py-1 px-2 placeholder:text-[#15ff00] text-[#15ff00]"
             />
             <input
               type="email"
@@ -75,6 +76,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               required
+              className="bg-gray-950 outline-none rounded-lg py-1 px-2 placeholder:text-[#15ff00] text-[#15ff00]"
             />
             <textarea
               name="message"
@@ -83,30 +85,15 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               required
+              className="bg-gray-950 outline-none rounded-lg py-1 px-2 placeholder:text-[#15ff00] text-[#15ff00]"
             ></textarea>
             <button className="btn-primary w-fit" type="submit">
               Send Message
             </button>
-            {status && <p>{status}</p>}
+            {status && <p className="text-[#15ff00]">{status}</p>}
           </form>
-          <div className="flex flex-col  gap-7 ">
-            {contact_info.map((contact, i) => (
-              <div
-                key={i}
-                className="flex flex-row  
-                  text-left gap-4 flex-wrap items-center"
-              >
-                <div className="min-w-[3.5rem]  text-3xl min-h-[3.5rem] flex items-center justify-center text-white bg-cyan-600 rounded-full">
-                  <ion-icon name={contact.logo}></ion-icon>
-                </div>
-                <p className="md:text-base text-sm  break-words">
-                  {contact.text}
-                </p>
-              </div>
-            ))}
-          </div>
         </div>
-        {/* <div className="mt-8 text-3xl sm:text-4xl md:text-5xl flex flex-wrap justify-center gap-3 md:gap-5">
+        <div className="mt-8 text-3xl sm:text-4xl md:text-5xl flex flex-wrap justify-center gap-3 md:gap-5">
           {social_media?.map((media) => (
             <div
               key={media.key}
@@ -117,7 +104,7 @@ const Contact = () => {
               </a>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
 
     </section>

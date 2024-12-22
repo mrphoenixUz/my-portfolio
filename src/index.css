@@ -7,8 +7,9 @@ html {
   @apply font-Poppins scroll-smooth;
 }
 body {
-  @apply box-border bg-black text-red-100;
+  @apply box-border bg-black text-[#15ff00];
 }
+
 .btn-primary {
   @apply bg-[#006500] hover:bg-[#15ff00] font-semibold text-white md:mx-0 mx-auto rounded-full py-3 px-6 flex items-center gap-2;
 }
@@ -20,3 +21,4 @@ body {
 .swiper-pagination-bullet-active {
   @apply !bg-[#00ff00];
 }
+

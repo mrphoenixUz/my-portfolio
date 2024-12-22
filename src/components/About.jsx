@@ -7,7 +7,6 @@ const About = () => {
         <h3 className="text-4xl font-semibold">
           About <span className="text-[#15ff00]">Me</span>
         </h3>
-        <p className="text-gray-400 my-3 text-lg">My introduction</p>
         <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
           <div className="p-2">
             <div className="text-gray-300 justify-center my-3">
