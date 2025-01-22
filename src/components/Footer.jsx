@@ -3,7 +3,9 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="text-sm p-4 text-center text-white">
-      Copyright &nbsp;<i className="fa-regular fa-copyright"></i>&nbsp;&nbsp; 2024 Karimov Muhammadyahyo. All rights reserved.
+      {/* Copyright &nbsp;<i className="fa-regular fa-copyright"></i>&nbsp;&nbsp;  */}
+      2024 - {new Date().getFullYear()} Karimov Muhammadyahyo.
+      {/* All rights reserved. */}
     </div>
   );
 };

@@ -2,35 +2,29 @@ import React from "react";
 
 const Skills = () => {
   const skills = [
-    // {
-    //   logo: "fa-brands fa-html5",
-    //   level: "HTML5",
-    //   count: 76,
-    // },
+    {
+      logo: "fa-brands fa-html5",
+      level: "HTML5",
+    },
     // {
     //   logo: "fa-brands fa-css3-alt",
     //   level: "CSS3",
-    //   count: 70,
     // },
     {
       logo: "fa-brands fa-react",
       level: "ReactJS",
-      count: 60,
     },
     {
       logo: "fa-brands fa-node-js",
       level: "NodeJS",
-      count: 80,
     },
-    // {
-    //   logo: "fa-brands fa-js",
-    //   level: "JavaScript",
-    //   count: 91,
-    // },
+    {
+      logo: "fa-brands fa-js",
+      level: "JavaScript",
+    },
     // {
     //   logo: "fa-solid fa-database",
     //   level: "Databases",
-    //   count: 88,
     // },
   ];
   return (
@@ -43,12 +37,8 @@ const Skills = () => {
           {skills?.map((skill, i) => (
             <div
               key={i}
-              // className="border-2 group border-[#15ff00] relative min-w-[10rem] max-w-[16rem] bg-gray-900 p-10 rounded-xl"
             >
               <div
-                // style={{
-                //   background: `conic-gradient(#15ff00 ${skill.count}%,#ddd ${skill.count}%)`,
-                // }}
                 className="w-32 h-32 flex items-center justify-center rounded-full"
               >
                 <div className="text-6xl w-28 h-28 bg-gray-900 hover:bg-[#006500] transition-all rounded-full flex items-center justify-center group-hover:text-[#15ff00]">

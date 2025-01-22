@@ -1,5 +1,4 @@
 import React from "react";
-import aboutImg from "../assets/images/about-me.png";
 const About = () => {
   return (
     <section id="about" className="py-10 px-3 text-white">

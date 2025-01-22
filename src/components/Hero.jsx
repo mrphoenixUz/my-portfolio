@@ -1,5 +1,6 @@
 import React from "react";
 import hero from "../assets/images/hero.png";
+import me from "../assets/images/me.png";
 import ParticlesBg from "./ParticlesBg";
 const Hero = () => {
   return (

@@ -1,9 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import project1 from "../assets/images/project-1-flags.png";
+import project1 from "../assets/images/project-1-quiz.png";
 import project2 from "../assets/images/project-2-todo.png";
-import project3 from "../assets/images/project-3-estore.png";
-import project4 from "../assets/images/project-4-black.png";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
@@ -13,9 +11,9 @@ const Project = () => {
   const projects = [
     {
       img: project1,
-      name: "Where in the world?",
-      github_link: "https://github.com/mrphoenixUz/allflags-react",
-      live_link: "https://allflags-react.vercel.app",
+      name: "Quiz app to test your knowledge",
+      github_link: "https://github.com/mrphoenixUz/quiz-app",
+      live_link: "https://quiz.mrphoenix.vip",
     },
     {
       img: project2,
@@ -23,18 +21,18 @@ const Project = () => {
       github_link: "https://github.com/mrphoenixUz/todo-pro",
       live_link: "https://todo-pro-ever-made.netlify.app",
     },
-    {
-      img: project3,
-      name: "E-store",
-      github_link: "https://github.com/mrphoenixUz/nornlight-estore",
-      live_link: "https://nornlight-estore.vercel.app",
-    },
-    {
-      img: project4,
-      name: "Blank",
-      github_link: "https://github.com/mrphoenixUz",
-      live_link: "",
-    },
+    // {
+    //   img: project3,
+    //   name: "",
+    //   github_link: "",
+    //   live_link: "",
+    // },
+    // {
+    //   img: project4,
+    //   name: "",
+    //   github_link: "",
+    //   live_link: "",
+    // },
   ];
   return (
     <section id="projects" className="py-10 px-3 text-white">

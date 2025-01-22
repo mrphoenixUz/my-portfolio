@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { toggleTheme } from "../redux/themeSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();
