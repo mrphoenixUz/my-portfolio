@@ -1,4 +1,6 @@
 import React from "react";
+import cv from "../assets/cv.pdf"
+
 const About = () => {
   return (
     <section id="about" className="py-10 px-3 text-white">
@@ -13,7 +15,7 @@ const About = () => {
                 My name is Karimov Muhammadyahyo. I completed the Fullstack course at Najot Ta'lim and am currently a 2nd-year student at the Fergana branch of TUIT. I'm 20 years old and passionate about programming, chess, games, and more. I'm always eager to learn new technologies and improve my skills.
               </p>
               <br />
-              <a className="flex justify-center" href="./src/assets/cv.pdf" download>
+              <a className="flex justify-center" href={cv} download>
                 <button className="btn-primary">Download CV</button>
               </a>
             </div>
