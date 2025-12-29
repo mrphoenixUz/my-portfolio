@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "../assets/cv.pdf"
+import cv from "../assets/cv.pdf";
 
 const About = () => {
   return (
@@ -11,8 +11,9 @@ const About = () => {
         <div className="flex md:flex-row flex-col-reverse items-center md:gap-6 gap-12 px-10 max-w-6xl mx-auto">
           <div className="p-2">
             <div className="text-gray-300 justify-center my-3">
-              <p className="text-justify leading-7 w-11/12 mx-auto">
-                My name is Karimov Muhammadyahyo. I completed the Fullstack course at Najot Ta'lim and am currently a 2nd-year student at the Fergana branch of TUIT. I'm 20 years old and passionate about programming, chess, games, and more. I'm always eager to learn new technologies and improve my skills.
+              <p className="text-justify text-2xl leading-7 w-11/12 mx-auto">
+                My name is Karimov Muhammadyahyo. I am Fullstack developer. Now
+                learning new technologies and always improving my skills.
               </p>
               <br />
               <a className="flex justify-center" href={cv} download>
